@@ -34,6 +34,13 @@ namespace Net_Core_Web_API.Service
             return mainList;
         }
 
+        public async Task<List<User>> GetUsersAsync()
+        {
+            var userList=await _context.Users.AsNoTracking().ToListAsync();
+            return userList;    
+        }
+
+
         public async Task<ICollection<CustomSPModel_Get_Result>> SpResultAsync()
         {
             var spData= await ExecuteStoredProcCollectionAsync<CustomSPModel_Get_Result>

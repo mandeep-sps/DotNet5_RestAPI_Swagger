@@ -36,6 +36,23 @@ namespace Net_Core_Web_API.Controllers
             
         }
 
+        [HttpGet]
+        [Route("GetUsers")]
+        public async Task<IActionResult> GetUsers()
+        {
+            try
+            {
+                var serviceResult = await _lectureService.GetUsersAsync();
+                return Ok(serviceResult);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+
+        }
+
 
     }
 }
