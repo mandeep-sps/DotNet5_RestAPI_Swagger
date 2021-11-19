@@ -11,5 +11,7 @@
         public decimal? Credit { get; set; }
 
         public Guid TeacherId { get; set; }
+
+        public Guid? StudentId { get; set; }
     }
 }

@@ -27,7 +27,8 @@ namespace Net_Core_Web_API.Service
                 LectureDesc=x.LectureDescription,
                 BoardUrl=x.Boardurl,
                 Credit=x.Credit,
-                TeacherId=x.TeacherId
+                TeacherId=x.TeacherId,
+                StudentId=x.StudentId
             }).OrderByDescending(x=>x.Id).ToList();
 
             return mainList;
